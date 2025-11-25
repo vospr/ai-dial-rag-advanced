@@ -35,7 +35,6 @@ def run_test(rag: MicrowaveRAG, query: str, test_num: int):
     answer = rag.generate_answer(augmented_prompt)
     
     print_separator()
-    input("Press Enter to continue to next test...")
 
 
 def main():
@@ -62,7 +61,9 @@ def main():
     )
     
     print("✅ RAG System initialized successfully!")
-    input("\nPress Enter to start tests...")
+    print("\n" + "=" * 100)
+    print("Starting automated tests...")
+    print("=" * 100)
     
     # Test 1: Valid query - Safety precautions
     run_test(
